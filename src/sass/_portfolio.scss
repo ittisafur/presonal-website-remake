@@ -1,0 +1,51 @@
+.portfolio-heading {
+  padding: 60px 0px;
+}
+
+.portfolio-heading h1 {
+  font-size: $h2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Project
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: $yellow;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+.timeline img {
+  width: 350px;
+}
+.timeline .row {
+  display: flex;
+  position: relative;
+}
+.timeline .row:nth-child(even) {
+  justify-content: flex-end;
+}
+.timeline .row::before {
+  content: "";
+  width: 15%;
+  height: 1px;
+  background-color: $yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+.timeline .row:nth-child(odd)::before {
+  right: 50%;
+  left: inherit;
+}
