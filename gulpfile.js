@@ -1,8 +1,9 @@
-const gulp = require("gulp");
+const { gulp, series, dest } = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const cleancss = require("gulp-clean-css");
 const browserSync = require("browser-sync").create();
+const cache = require("gulp-cached");
 
 function style() {
   return gulp
@@ -11,7 +12,7 @@ function style() {
     .pipe(sass().on("error", sass.logError))
     .pipe(cleancss())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("src/css"))
+    .pipe(dest("src/css"))
     .pipe(browserSync.stream());
 }
 
