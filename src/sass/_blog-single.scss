@@ -86,6 +86,8 @@
 .single-blog-related-post {
   h1 {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 
@@ -115,6 +117,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.inner-blog-carousel-content h4 {
+  display: block;
+}
+
+.inner-blog-carousel-content p {
+  display: block;
 }
 
 .inner-blog-carousel-content:hover {

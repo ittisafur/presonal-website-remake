@@ -98,6 +98,8 @@
 .toggler:checked ~ .menu > div > div {
   opacity: 1;
 }
+.menu > div > div > ul > li > a:active ~ .toggler:not(:checked) {
+}
 
 .menu {
   position: fixed;

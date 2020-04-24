@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 @import "variables";
+// Global
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +10,9 @@
 *::selection {
   color: $primary-color;
   background-color: $selection;
+}
+a:focus {
+  outline: none;
 }
 
 body {
@@ -19,8 +23,11 @@ h1,
 h2,
 h4 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
-
+p {
+  font-weight: 400;
+}
 p,
 a {
   font-family: "Dosis", sans-serif;
@@ -31,6 +38,16 @@ h2,
 h4,
 p {
   color: $yellow;
+}
+
+.page-title {
+  padding: 60px 0px;
+  h1 {
+    font-size: $h1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 }
 
 /* ------- Start Menu Css ------- */
@@ -61,4 +78,8 @@ p {
 /* ------- Start Single Css ------- */
 @import "blog-single";
 
+/* ------- Start Contact Css ------- */
+@import "contact";
+
+/* ------- Start Responsive Css ------- */
 @import "responsive";
