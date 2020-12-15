@@ -1,8 +1,10 @@
 // Base Font Size
 $h1: 36px;
-$h2: 25px;
+$h2: 30px;
+$h3: 25px;
 $p: 16px;
 $span_p: 14px;
+$span_small: 12px;
 
 $line-height: 32px;
 
@@ -14,3 +16,12 @@ $base-head-color: #f2c12e;
 $yellow: #f4c859;
 $blog-p: #ffda00;
 $selection: #ffdd1a;
+$transperant_bg : rgba(26, 26, 26, 0.6);
+$widget_bg: #1A1616;
+
+// Font Weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;

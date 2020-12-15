@@ -43,6 +43,40 @@ $(document).ready(function () {
   $(".menu > div > div > ul > li > a").on("click", function () {
     $(".toggler").prop("checked", false);
   });
+
+  // Portfolio Transition
+  let h2Elements = Array.from(document.querySelectorAll(".portfolio h2"));
+
+  h2Elements.forEach((el) => {
+    el.addEventListener("mouseenter", function () {
+      this.parentElement.parentElement.nextElementSibling
+        .querySelector("img")
+        .classList.add("left-push");
+    });
+    el.addEventListener("mouseleave", function () {
+      this.parentElement.parentElement.nextElementSibling
+        .querySelector("img")
+        .classList.remove("left-push");
+    });
+  });
+
+  // Portfolio Image Isotope
+  $(".portfolio-grid").isotope({
+    itemSelector: ".grid-item",
+    percentPosition: true,
+    layoutMode: "fitRows",
+    fitRows: {
+      gutter: 10,
+    },
+  });
+
+  $().fancybox({
+    selector: ".grid-item a:visible",
+    thumbs: {
+      autoStart: true,
+    },
+  });
+
   // var $window = $(window),
   //   $grid_item = $(".grid-item");
 

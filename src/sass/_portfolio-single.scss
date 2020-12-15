@@ -1,0 +1,104 @@
+.portfolio-single-title {
+  margin: 90px 0px;
+  h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin-top: 10%;
+    span {
+      font-family: "Montserrat", sans-serif;
+      padding-left: 5%;
+      &:before {
+        content: "";
+        width: 3%;
+        height: 2px;
+        bottom: 10px;
+        position: absolute;
+        background: $yellow;
+        left: 8%;
+      }
+    }
+  }
+}
+
+.portfolio-single {
+  margin-bottom: 2%;
+  h5 {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: $yellow;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 25px;
+  }
+  span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: $yellow;
+    padding-top: 25px;
+    display: block;
+  }
+}
+.portfolio-gallery {
+  
+  padding: 60px 0px;
+  background-color: #1A1616;
+  // background-color: $blog-p;
+  .portfolio-grid {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    .grid-item {
+      width: 32%;
+      margin: 2% auto;
+      img {
+        width: 100%;
+        filter: grayscale(1);
+        transition: filter 0.8s ease-out;
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+    .grid-sizer {
+      width: 33.333%;
+    }
+  }
+}
+
+.single-portfolio-content {
+  h5 {
+    font-size: 14px;
+    color: $yellow;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5%;
+  }
+  p {
+    padding-top: 0px;
+    font-family: "Montserrat", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: $yellow;
+    text-align: center;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 15%;
+    transition: all 0.5s ease-out;
+    &:hover {
+      background-color: $yellow;
+      color: $primary-color;
+    }
+  }
+}

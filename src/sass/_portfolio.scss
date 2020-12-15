@@ -1,51 +1,89 @@
-.portfolio-heading {
-  padding: 60px 0px;
-}
-
-.portfolio-heading h1 {
-  font-size: $h2;
+.hero-portfolio {
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 60px 0px;
+  letter-spacing: 5px;
+  h1{
+    text-transform: uppercase;
+  }
+}
+.filter ul {
+  margin: 0;
+  text-align: center;
+  li {
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: $yellow;
+    text-transform: uppercase;
+    font-size: $p;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $yellow;
+      color: $primary-color;
+    }
+  }
 }
 
-// Project
-.timeline {
+.grid {
+  text-align: center;
+  // max-width: 95vw;
+  margin: 2.5vw auto;
   display: flex;
-  flex-direction: column;
+}
+
+.portfolio-wrapper {
+  margin: 0 auto;
+  img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: all 0.4s ease-in;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.grid {
+  text-align: center;
+  /*   max-width: 95vw; */
+  margin: 2.5vw auto;
+}
+
+.grid-item {
   position: relative;
 }
-.timeline::before {
-  content: "";
-  display: block;
-  width: 1px;
-  background-color: $yellow;
+
+.grid-sizer,
+.grid-item {
+  width: 33.3333%;
+}
+// .grid-item--width2 {
+//   width: 40% !important;
+// }
+
+.portfolio-colcade-content {
   position: absolute;
-  top: 0;
+  top: 0px;
+  left: 0;
   bottom: 0;
-  left: 50%;
-}
-.timeline img {
-  width: 350px;
-}
-.timeline .row {
+  right: 0;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.6);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  height: 100%;
   display: flex;
-  position: relative;
-}
-.timeline .row:nth-child(even) {
-  justify-content: flex-end;
-}
-.timeline .row::before {
-  content: "";
-  width: 15%;
-  height: 1px;
-  background-color: $yellow;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-}
-.timeline .row:nth-child(odd)::before {
-  right: 50%;
-  left: inherit;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  h4,
+  p {
+    display: block;
+  }
+  &:hover {
+    opacity: 1;
+  }
 }

@@ -1,5 +1,6 @@
+@charset 'utf-8';
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import "variables";
 // Global
 * {
@@ -11,6 +12,10 @@
   color: $primary-color;
   background-color: $selection;
 }
+
+img{
+  max-width: 100%;
+}
 a:focus {
   outline: none;
 }
@@ -19,34 +24,36 @@ body {
   background-color: #1a1a1a;
   color: #fff;
 }
+
+h2{
+  font-size: $h2;
+}
+
 h1,
 h2,
 h4 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  color: $yellow;
 }
 p {
   font-weight: 400;
+  color: $yellow;
 }
 p,
 a {
   font-family: "Dosis", sans-serif;
 }
-
-h1,
-h2,
-h4,
-p {
-  color: $yellow;
+// Helper Class
+.left-push {
+  margin-left: 5% !important;
 }
 
 .page-title {
   padding: 60px 0px;
   h1 {
-    font-size: $h1;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
   }
 }
 
@@ -54,28 +61,112 @@ p {
 @import "menu";
 
 /* ------- Index Css -------*/
-.hero {
+.hero-section {
   padding: 60px 0px;
-  height: 95vh;
+  min-height: 100vh;
 }
 
 .hero-inner > h1 span {
   font-weight: bold;
 }
 
-.hero h1,
-.hero h2 {
-  text-align: center;
-  letter-spacing: 2px;
+.hero-section h1, p{
+  letter-spacing: 1.6px;
+  font-weight: 500px;
 }
+.hero-section h1{
+  font-size: 60px;
+}
+
+.hero-section p {
+  font-size: $p;  
+}
+.hero-section img{
+  width: 440px;
+  height: auto;
+}
+
+.hero-bot{
+  h2{
+    font-size: $h3;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+  }
+  ul{
+    padding:0;
+    margin: 0;
+    li{
+      list-style: none;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px 10px;
+      img{
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.frontpage-service{
+
+  h1{
+    font-size: $h2;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .frontpage-service-inner{
+    padding: 20px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #1A1616;
+    h2{
+      font-size: $h3;
+      font-weight: 700;
+      margin: 40px 0px 40px 0px
+    }
+    p{
+      font-weight: 500;
+      text-align: justify;
+    }
+  }
+  a{
+    color: $yellow;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 50px;
+    border-radius: 0;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      background-color: $yellow;
+      color: $primary-color;
+
+    }
+  }
+
+}
+/* ------- Start Footer Css ------- */
+@import "footer";
+
+/* ------- Start Widget Css ------- */
+@import "widget";
 
 /* ------- Start Portfolio Css ------- */
 @import "portfolio";
 
+/* ------- Start Portfolio Single Css ------- */
+@import "portfolio-single";
+/* ------- Start Services Css ------- */
+@import "services";
+
 /* ------- Start Blog Css ------- */
 @import "blog";
 
-/* ------- Start Single Css ------- */
+/* ------- Start Blog Single Css ------- */
 @import "blog-single";
 
 /* ------- Start Contact Css ------- */

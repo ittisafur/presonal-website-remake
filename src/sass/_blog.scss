@@ -3,84 +3,43 @@
   padding: 60px 0px;
   letter-spacing: 5px;
 }
-.filter ul {
-  margin: 0;
-  text-align: center;
-  li {
-    list-style: none;
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px;
-    color: $yellow;
-    text-transform: uppercase;
-    font-size: $p;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      background-color: $yellow;
-      color: $primary-color;
+
+.blog{
+  .blog-main{
+    .blog-inner{
+      min-height: 300px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      filter: grayscale(1);
+      position: relative;
     }
-  }
-}
-
-.grid {
-  text-align: center;
-  // max-width: 95vw;
-  margin: 2.5vw auto;
-  display: flex;
-}
-
-.blog-wrapper {
-  margin: 0 auto;
-  img {
-    width: 100%;
-    filter: grayscale(1);
-    transition: all 0.4s ease-in;
-    &:hover {
-      filter: grayscale(0);
+    .blog-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      opacity: 0;
+      height: 100%;
+      background-color: $transperant_bg;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      h2,p{
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+      }
+      p{
+        font-weight: 700;
+      }
+      &:hover{
+        opacity: 1;
+        cursor: pointer;
+      }
     }
-  }
-}
-
-.grid {
-  text-align: center;
-  /*   max-width: 95vw; */
-  margin: 2.5vw auto;
-}
-
-.grid-item {
-  position: relative;
-}
-
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-}
-.grid-item--width2 {
-  width: 40% !important;
-}
-
-.blog-colcade-content {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  background-color: rgba(26, 26, 26, 0.6);
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  cursor: pointer;
-  h4,
-  p {
-    display: block;
-  }
-  &:hover {
-    opacity: 1;
   }
 }
