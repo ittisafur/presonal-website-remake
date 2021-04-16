@@ -1,8 +1,11 @@
 // Base Font Size
 $h1: 36px;
 $h2: 25px;
+$h3: 25px;
 $p: 16px;
 $span_p: 14px;
+
+$span_small: 12px;
 
 $line-height: 32px;
 
@@ -12,5 +15,27 @@ $base-heading-size: 36px;
 $menu-hamburger: #f4c042;
 $base-head-color: #f2c12e;
 $yellow: #f4c859;
+$dark-yellow: #D9910B;
 $blog-p: #ffda00;
 $selection: #ffdd1a;
+
+// Font Variations
+$font-dosis: "Dosis", sans-serif;
+$font-mont: "Montserrat", sans-serif;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Basic Settings
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $yellow;
+    font-family: "Montserrat", sans-serif;
+}

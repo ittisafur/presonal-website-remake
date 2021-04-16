@@ -1,51 +1,89 @@
-.portfolio-heading {
-  padding: 60px 0px;
+.filter ul {
+    margin: 0;
+    text-align: center;
+    li {
+        list-style: none;
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px;
+        color: $yellow;
+        text-transform: uppercase;
+        font-size: $p;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: $yellow;
+            color: $primary-color;
+        }
+    }
 }
 
-.portfolio-heading h1 {
-  font-size: $h2;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.grid {
+    text-align: center;
+    // max-width: 95vw;
+    margin: 2.5vw auto;
+    display: flex;
 }
 
-// Project
-.timeline {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.blog-wrapper {
+    margin: 0 auto;
+    img {
+        width: 100%;
+        filter: grayscale(1);
+        transition: all 0.4s ease-in;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
 }
-.timeline::before {
-  content: "";
-  display: block;
-  width: 1px;
-  background-color: $yellow;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
+
+.grid {
+    text-align: center;
+    /*   max-width: 95vw; */
+    margin: 2.5vw auto;
 }
-.timeline img {
-  width: 350px;
+
+.grid-item {
+    position: relative;
 }
-.timeline .row {
-  display: flex;
-  position: relative;
+
+.grid-sizer,
+.grid-item {
+    width: 33.3333%;
+    @include respond(phone) {
+        width: 50%;
+    }
 }
-.timeline .row:nth-child(even) {
-  justify-content: flex-end;
-}
-.timeline .row::before {
-  content: "";
-  width: 15%;
-  height: 1px;
-  background-color: $yellow;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-}
-.timeline .row:nth-child(odd)::before {
-  right: 50%;
-  left: inherit;
+// .grid-item--width2 {
+//   width: 40% !important;
+// }
+
+.blog-colcade-content {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.6);
+    opacity: 0; 
+    transition: all 0.4s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+    @include respond(phone) {
+        opacity: 1;
+        h4{
+            font-size: 14px;
+        }
+        p{
+            display: none;
+        }
+    }
 }

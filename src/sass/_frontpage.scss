@@ -1,0 +1,147 @@
+.hero {
+    margin: 30px 0px 0px 0px;
+}
+.hero-intro {
+    &--mb-5 {
+        margin-bottom: 3%;
+        margin-top: 8%;
+    }
+    @include respond(phone) {
+        &--mb-5 {
+            margin-top: 25%;
+            margin-bottom: 10%;
+        }
+    }
+}
+.hero-left {
+    text-align: left;
+    h1,
+    span {
+        font-weight: $font-medium;
+        color: $yellow;
+        letter-spacing: 1px;
+        font-size: 36px;
+    }
+    blockquote {
+        color: $yellow;
+        font-weight: $font-medium;
+        footer {
+            color: $yellow;
+        }
+    }
+    p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: $font-medium;
+    }
+    @include respond(phone) {
+        h3 {
+            margin-bottom: 10%;
+        }
+    }
+}
+.hero__right {
+    text-align: center;
+    img {
+        margin-right: 8%;
+        margin-bottom: 8%;
+        width: 60px;
+        height: 60px;
+        @include respond(tab-port) {
+            margin-right: 5%;
+            margin-bottom: 8%;
+            height: 55px;
+            width: 55px;
+        }
+        @include respond(phone) {
+            margin-right: 5%;
+            margin-bottom: 8%;
+            height: 40px;
+            width: 40px;
+        }
+    }
+    @include respond(phone) {
+        h3 {
+            margin-top: 10%;
+        }
+    }
+}
+
+.front-services {
+    margin-bottom: 20px;
+
+    @include respond(phone) {
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        color: $yellow;
+        margin: 30px auto;
+        padding: 10px 35px;
+        border-radius: 0;
+        font-family: $font-mont;
+        font-weight: $font-medium;
+        border: none;
+        transition: all 0.8s ease-in;
+        &:hover {
+            background-color: $yellow;
+            color: $primary-color;
+            border: none;
+        }
+
+        @include respond(phone) {
+            margin: 0 auto;
+        }
+        @include respond(tab-port) {
+            margin: 8px auto;
+        }
+    }
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        @include respond(tab-port){
+            margin-top: 5%;
+        }
+        @include respond(phone) {
+            margin-top: 5%;
+        }
+    }
+    &__1,
+    &__2,
+    &__3 {
+        background-color: #1a1616;
+        padding: 60px 40px;
+        text-align: center;
+        @include respond(tab-port) {
+            padding: 60px 20px;
+        }
+        h4 {
+            font-weight: $font-bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+
+            @include respond(smallphone) {
+                margin-bottom: 10px;
+            }
+
+            @include respond(tab-port) {
+                font-size: 22px;
+            }
+        }
+        p {
+            font-family: $font-dosis;
+            font-weight: $font-medium;
+        }
+
+        @include respond(phone) {
+            margin-bottom: 10%;
+        }
+    }
+    &__1 {
+    }
+    &__2 {
+    }
+    &__3 {
+    }
+}
